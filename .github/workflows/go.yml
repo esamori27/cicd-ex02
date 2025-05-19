@@ -123,4 +123,4 @@ jobs:
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/demo:latest
 
       - name: Push Docker image (SHA)
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/demo:${GIT_SHA}
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/demo:${GIT_SHA} 
