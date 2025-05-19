@@ -16,7 +16,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 # Build the Go app as myapp binary and move it to /usr/
-RUN go build -o myapp main.go && mv myapp /usr/
+RUN go build -o myapp . && mv myapp /usr/
 
 # Expose port 8888
 EXPOSE 8888
