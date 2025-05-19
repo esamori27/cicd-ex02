@@ -100,7 +100,7 @@ jobs:
 
       - name: Tag image with Git SHA
         run: |
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/my-first-image:latest ${{ secrets.DOCKERHUB_USERNAME }}/demo:${GIT_SHA}
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/demo:latest ${{ secrets.DOCKERHUB_USERNAME }}/demo:${GIT_SHA}
 
       - name: Push Docker image (latest)
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/demo:latest
